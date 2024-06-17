@@ -1,0 +1,550 @@
+{
+	"info": {
+		"_postman_id": "3f9cae21-4fec-4ff8-9cef-694cd306980f",
+		"name": "R2SShop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "33587388"
+	},
+	"item": [
+		{
+			"name": "Get all category",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJsYW1jaHVvbmcwNCIsImlhdCI6MTcxMjIyNzY4NSwiZXhwIjoxNzE0ODE5Njg1fQ.byYr41KkIzuvwe0tAWaaR_jm7NCvhSLlvXnVzPn0gss",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:8080/api/categories"
+			},
+			"response": []
+		},
+		{
+			"name": "Get all product by categoryId",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJsYW1jaHVvbmcwNCIsImlhdCI6MTcxMjIyNzY4NSwiZXhwIjoxNzE0ODE5Njg1fQ.byYr41KkIzuvwe0tAWaaR_jm7NCvhSLlvXnVzPn0gss",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/products/by-category?page=0&size=2&categoryId=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products",
+						"by-category"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "2"
+						},
+						{
+							"key": "categoryId",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all detail product by id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuZXd1c2VyIiwiaWF0IjoxNzE3Njg3MjY0LCJleHAiOjE3MTc3MjMyNjR9.FIMPwVjBkXvXCjYhUFCjGk9dcuadeukk-zUhhCpyEvI",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:8080/api/products/3"
+			},
+			"response": []
+		},
+		{
+			"name": "Get all variants by product id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuZXd1c2VyIiwiaWF0IjoxNzE3Njg3MjY0LCJleHAiOjE3MTc3MjMyNjR9.FIMPwVjBkXvXCjYhUFCjGk9dcuadeukk-zUhhCpyEvI",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:8080/api/products/1/variants"
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJsYW1jaHVvbmcwNCIsImlhdCI6MTcxMjIyNzY4NSwiZXhwIjoxNzE0ODE5Njg1fQ.byYr41KkIzuvwe0tAWaaR_jm7NCvhSLlvXnVzPn0gss",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"newuser2\",\r\n  \"password\": \"newpassword2\",\r\n  \"email\": \"newuser2@example.com\",\r\n  \"fullName\": \"New User2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/users/register"
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"newuser1\",\r\n    \"password\": \"newpassword1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/auth/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Get user detail login",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuZXd1c2VyMiIsImlhdCI6MTcxNzg2MDQ2MywiZXhwIjoxNzIwNDUyNDYzfQ.nh-iiGD1nqzzckaMhqy-DdRHcvFDla3IrKo6BD48daw"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuZXd1c2VyMiIsImlhdCI6MTcxNzg1OTA5MiwiZXhwIjoxNzE3ODk1MDkyfQ.A5HBIgJvxk2kDte_PbIJhCt3SUOiTicWPrlsCkRRXMY",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/users/me"
+			},
+			"response": []
+		},
+		{
+			"name": "Update user",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuZXd1c2VyMiIsImlhdCI6MTcxNzg1OTgzMSwiZXhwIjoxNzIwNDUxODMxfQ.e_jaAr-eHKCLh4QqBFW_ThbhjrYJnmYOBFkMPxnpOeI"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"updateduser3@example.com\",\r\n    \"fullName\": \"Updated User3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/users/me"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Address",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuZXd1c2VyMiIsImlhdCI6MTcxNzg2NTA0MiwiZXhwIjoxNzIwNDU3MDQyfQ.gY3BROFS97c-HBavS6SMhqrkXq1U5ETLrGRU9Ac6oGk"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuZXd1c2VyMiIsImlhdCI6MTcxNzg1OTgzMSwiZXhwIjoxNzIwNDUxODMxfQ.e_jaAr-eHKCLh4QqBFW_ThbhjrYJnmYOBFkMPxnpOeI"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"updateduser3@example.com\",\r\n    \"fullName\": \"Updated User3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/addresses"
+			},
+			"response": []
+		},
+		{
+			"name": "Add Address",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuZXd1c2VyMiIsImlhdCI6MTcxNzg2NTA0MiwiZXhwIjoxNzIwNDU3MDQyfQ.gY3BROFS97c-HBavS6SMhqrkXq1U5ETLrGRU9Ac6oGk"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuZXd1c2VyMiIsImlhdCI6MTcxNzg1OTgzMSwiZXhwIjoxNzIwNDUxODMxfQ.e_jaAr-eHKCLh4QqBFW_ThbhjrYJnmYOBFkMPxnpOeI"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"detailAddress\": \"Thôn 1, Phước Thể, Tuy Phong, Bình Thuận\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/addresses"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Address",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuZXd1c2VyMiIsImlhdCI6MTcxNzg1OTgzMSwiZXhwIjoxNzIwNDUxODMxfQ.e_jaAr-eHKCLh4QqBFW_ThbhjrYJnmYOBFkMPxnpOeI"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"detailAddress\": \"Hồ Chí Minh\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/addresses/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Address",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuZXd1c2VyMiIsImlhdCI6MTcxNzg2NTMzMywiZXhwIjoxNzIwNDU3MzMzfQ.AvK4lpE96XDj2Fl0zgTKgG_DERej7NSuY8qbtPATHog"
+					}
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuZXd1c2VyMiIsImlhdCI6MTcxNzg1OTgzMSwiZXhwIjoxNzIwNDUxODMxfQ.e_jaAr-eHKCLh4QqBFW_ThbhjrYJnmYOBFkMPxnpOeI"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/addresses/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Add Product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuZXd1c2VyMiIsImlhdCI6MTcxODU5ODQyMiwiZXhwIjoxNzIxMTkwNDIyfQ.vS8L-xg9JC8BLoUv1avfN_eFc3ZxTBXXw48fH9YxfZQ"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuZXd1c2VyMiIsImlhdCI6MTcxNzg1OTgzMSwiZXhwIjoxNzIwNDUxODMxfQ.e_jaAr-eHKCLh4QqBFW_ThbhjrYJnmYOBFkMPxnpOeI"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"New Product\",\r\n    \"categoryId\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/products"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuZXd1c2VyMiIsImlhdCI6MTcxODU5ODUzOSwiZXhwIjoxNzIxMTkwNTM5fQ.JemZdH8fy0uvL6eYHNd_VD98RZELNGh1dH14ePJp9n4"
+					}
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuZXd1c2VyMiIsImlhdCI6MTcxNzg1OTgzMSwiZXhwIjoxNzIwNDUxODMxfQ.e_jaAr-eHKCLh4QqBFW_ThbhjrYJnmYOBFkMPxnpOeI"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Old Product\",\r\n    \"categoryId\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/products/32"
+			},
+			"response": []
+		},
+		{
+			"name": "Add Variant-Product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuZXd1c2VyMiIsImlhdCI6MTcxODU5OTg0NywiZXhwIjoxNzIxMTkxODQ3fQ.AMddpwqbEdqowmyRHHoMPyBcuXII1mmMnNaAuabgfPU"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuZXd1c2VyMiIsImlhdCI6MTcxNzg1OTgzMSwiZXhwIjoxNzIwNDUxODMxfQ.e_jaAr-eHKCLh4QqBFW_ThbhjrYJnmYOBFkMPxnpOeI"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"color\":\"Trắng\",\r\n    \"size\":\"Dài 3.09 cm - Rộng 2.18 cm - Cao 2.17 cm\",\r\n    \"model\":\"Tai nghe Bluetooth AirPods Pro Gen 2 MagSafe Charge\",\r\n    \"price\":6200000,\r\n    \"productId\": 15\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/variant-products"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Variant-Product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuZXd1c2VyMiIsImlhdCI6MTcxODU5ODY0MSwiZXhwIjoxNzIxMTkwNjQxfQ.fG7cpkGDLXlfMsGqYF_DHhx9ynN2YcwgoH4Vlx6pfxs"
+					}
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuZXd1c2VyMiIsImlhdCI6MTcxNzg1OTgzMSwiZXhwIjoxNzIwNDUxODMxfQ.e_jaAr-eHKCLh4QqBFW_ThbhjrYJnmYOBFkMPxnpOeI"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"color\":\"Trắng\",\r\n    \"size\":\"Dài 3.09 cm - Rộng 2.18 cm - Cao 2.17 cm\",\r\n    \"model\":\"Tai nghe Bluetooth AirPods Pro Gen 2 MagSafe Charge (USB-C) Apple MTJV3\",\r\n    \"price\":5690000,\r\n    \"productId\": 15\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/variant-products/19"
+			},
+			"response": []
+		},
+		{
+			"name": "Add CartLineItem for User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuZXd1c2VyMSIsImlhdCI6MTcxODYwNDg0NywiZXhwIjoxNzIxMTk2ODQ3fQ.POOZUEtY5vZouy1y-p6K9LHGsSIb1MIo-X66kGceCrU"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuZXd1c2VyMiIsImlhdCI6MTcxNzg1OTgzMSwiZXhwIjoxNzIwNDUxODMxfQ.e_jaAr-eHKCLh4QqBFW_ThbhjrYJnmYOBFkMPxnpOeI"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"variantProductId\": 2,\r\n    \"quantity\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/cart/add"
+			},
+			"response": []
+		},
+		{
+			"name": "Order",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuZXd1c2VyMSIsImlhdCI6MTcxODYwNjAwOSwiZXhwIjoxNzIxMTk4MDA5fQ.dPSbJE_V_YcXFLn2Q7CCRKPjW4nj309NAzAn9jFyuBg"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuZXd1c2VyMiIsImlhdCI6MTcxNzg1OTgzMSwiZXhwIjoxNzIwNDUxODMxfQ.e_jaAr-eHKCLh4QqBFW_ThbhjrYJnmYOBFkMPxnpOeI"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"address\": \"Phước Thể\",\r\n    \"deliveryTime\": \"2024-06-18T15:30:00\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/orders/create"
+			},
+			"response": []
+		}
+	]
+}
